@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+// --------------------------
+// Book
+// --------------------------
+
 // Book structure
 type Book struct {
 	ISBN      int
@@ -15,6 +19,7 @@ type Book struct {
 	Discount  float64
 }
 
+// NewBook constructor function for Books
 func NewBook(isbn int, title string, author *Author, genre string, publisher *Publisher, price float64) *Book {
 	book := Book{isbn, title, author, genre, publisher, price, 0.0}
 	return &book
@@ -40,16 +45,23 @@ func (b *Book) prettyPrint() {
 	fmt.Printf("%0.2f)", b.Discount)
 }
 
+// --------------------------
+// End of Book
+// --------------------------
+
 // Author is an author
 type Author struct {
 	FirstName string
 	Surname   string
 }
 
+// NewAuthor constructor function for Authors
 func NewAuthor(firstName string, surname string) *Author {
 	author := Author{firstName, surname}
 	return &author
 }
+
+// -------------------------
 
 // Publisher of books
 type Publisher struct {
@@ -57,10 +69,13 @@ type Publisher struct {
 	Address string
 }
 
+// NewPublisher constructor function for Publishers
 func NewPublisher(name string, address string) *Publisher {
 	publisher := Publisher{name, address}
 	return &publisher
 }
+
+// ------------------------
 
 func main() {
 	fmt.Println("Welcome to the Bookshop")
