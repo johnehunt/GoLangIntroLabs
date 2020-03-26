@@ -82,7 +82,7 @@ func main() {
 
 	var author = NewAuthor("Pete", "Smith")
 	var publisher = NewPublisher("Tech Books Publishing Ltd.", "10 High Street")
-	var book = NewBook(1, "Scala Unleashed", author, "Technical", publisher, 15.99)
+	var book = NewBook(1, "Go Unleashed", author, "Technical", publisher, 15.99)
 	book.prettyPrint()
 
 	fmt.Println("\nCalculating the Sales Discount price")
