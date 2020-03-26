@@ -8,6 +8,8 @@ import (
 // LoopTotal used for number of lops run by worker
 const LoopTotal = 20
 
+// Message structure used to send messages between
+// the producer and worker functions
 type Message struct {
 	ID  int
 	Msg string
