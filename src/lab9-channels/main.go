@@ -5,8 +5,8 @@ import (
 	"time"
 )
 
-// LoopTotal used for number of lops run by worker
-const LoopTotal = 20
+// LOOP_TOTAL used for number of lops run by worker
+const LOOP_TOTAL = 20
 
 // Message structure used to send messages between
 // the producer and worker functions
@@ -22,7 +22,7 @@ func worker(requests <-chan Message) {
 }
 
 func producer(msg string, requests chan<- Message) {
-	for i := 0; i < LoopTotal; i++ {
+	for i := 0; i < LOOP_TOTAL; i++ {
 		requests <- Message{i, msg}
 		time.Sleep(time.Millisecond)
 	}
